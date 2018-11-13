@@ -13,7 +13,7 @@ import org.icepdf.core.util.GraphicsRenderingHints;
 public abstract class IcePdfUtil {
 
 	/**
-	 * Converts a PDF document (given as a bíte array) to images.
+	 * Converts a PDF document (given as a byte array) to images.
 	 * 
 	 * @param b byte array representing the PDF document
 	 * @return ArrayList of BufferedImages
@@ -26,7 +26,7 @@ public abstract class IcePdfUtil {
 	}
 
 	/**
-	 * Converts a PDF document (given as a bíte array) to images.
+	 * Converts a PDF document (given as a byte array) to images.
 	 * 
 	 * @param b     byte array representing the PDF document
 	 * @param fZoom zoom ratio - how big should be the image
