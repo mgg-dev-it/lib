@@ -15,6 +15,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<icepdf.system.dir>e:\Users\MG\Projects\GitHub\fork\icepdf-6-3-1-repair\target\</icepdf.system.dir>
 	</properties>
 
 	<dependencies>
@@ -25,23 +26,30 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>mgg-dev-it</groupId>
-			<artifactId>icepdf-6-3-1-repair</artifactId>
-			<version>6.3.1</version>
+		<groupId>mgg-dev-it</groupId>
+		<artifactId>icepdf-6-3-1-repair</artifactId>
+		<version>6.3.1</version>
 		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>mgg-dev-it</groupId> -->
+<!-- 			<artifactId>icepdf-6-3-1-repair</artifactId> -->
+<!-- 			<version>6.3.1</version> -->
+<!-- 			<scope>system</scope> -->
+<!-- 			<systemPath>${icepdf.system.dir}\icepdf-6-3-1-repair-6.3.1.jar</systemPath> -->
+<!-- 		</dependency> -->
 	</dependencies>
-<!-- 	<repositories> -->
-<!-- 		<repository> -->
-<!-- 			<id>icepdf-repo</id> -->
-<!-- 			<url>https://github.com/mgg-dev-it/fork/releases/tag/icepdf-6-3-1-repair</url> -->
-<!-- 			<releases> -->
-<!-- 				<enabled>true</enabled> -->
-<!-- 			</releases> -->
-<!-- 			<snapshots> -->
-<!-- 				<enabled>true</enabled> -->
-<!-- 			</snapshots> -->
-<!-- 		</repository> -->
-<!-- 	</repositories> -->
+	<!-- <repositories> -->
+	<!-- <repository> -->
+	<!-- <id>icepdf-repo</id> -->
+	<!-- <url>https://github.com/mgg-dev-it/fork/releases/tag/icepdf-6-3-1-repair</url> -->
+	<!-- <releases> -->
+	<!-- <enabled>true</enabled> -->
+	<!-- </releases> -->
+	<!-- <snapshots> -->
+	<!-- <enabled>true</enabled> -->
+	<!-- </snapshots> -->
+	<!-- </repository> -->
+	<!-- </repositories> -->
 	<build>
 		<plugins>
 			<plugin>
@@ -66,6 +74,25 @@
 						<id>attach-javadocs</id>
 						<goals>
 							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>assemble-all</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
 						</goals>
 					</execution>
 				</executions>
