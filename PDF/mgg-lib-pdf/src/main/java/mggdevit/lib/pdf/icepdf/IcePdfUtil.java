@@ -12,7 +12,7 @@ import org.icepdf.core.util.GraphicsRenderingHints;
 
 public abstract class IcePdfUtil {
 
-	public static ArrayList<BufferedImage> convertPdfToImage2(byte[] b) {
+	public static ArrayList<BufferedImage> convertPdfToImage(byte[] b) {
 		Document document = new Document();
 		ArrayList<BufferedImage> alBIs = new ArrayList<>();
 		try {
