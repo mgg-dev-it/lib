@@ -12,18 +12,14 @@ import org.icepdf.core.util.GraphicsRenderingHints;
 
 public abstract class IcePdfUtil {
 
-	public static ArrayList<BufferedImage> name(byte[] b) {
+	public static ArrayList<BufferedImage> convertPdfToImage2(byte[] b) {
 		Document document = new Document();
 		ArrayList<BufferedImage> alBIs = new ArrayList<>();
 		try {
 			document.setByteArray(b, 0, b.length, null);
-			// save page captures to file.
 			float scale = 2.0f;
 			float rotation = 0f;
 
-			// Paint each pages content to an image and
-			// write the image to file
-			// BufferedImage image = null;
 			for (int i = 0; i < document.getNumberOfPages(); i++) {
 				try {
 					// BufferedImage image = (BufferedImage) document.getPageImage(i,
