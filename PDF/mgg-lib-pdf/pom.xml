@@ -30,18 +30,18 @@
 			<version>6.3.1</version>
 		</dependency>
 	</dependencies>
-	<repositories>
-		<repository>
-			<id>icepdf-repo</id>
-			<url>https://github.com/mgg-dev-it/fork/releases/tag/icepdf-6-3-1-repair</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
+<!-- 	<repositories> -->
+<!-- 		<repository> -->
+<!-- 			<id>icepdf-repo</id> -->
+<!-- 			<url>https://github.com/mgg-dev-it/fork/releases/tag/icepdf-6-3-1-repair</url> -->
+<!-- 			<releases> -->
+<!-- 				<enabled>true</enabled> -->
+<!-- 			</releases> -->
+<!-- 			<snapshots> -->
+<!-- 				<enabled>true</enabled> -->
+<!-- 			</snapshots> -->
+<!-- 		</repository> -->
+<!-- 	</repositories> -->
 	<build>
 		<plugins>
 			<plugin>
