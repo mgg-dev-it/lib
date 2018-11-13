@@ -13,7 +13,9 @@ import org.icepdf.core.util.GraphicsRenderingHints;
 public abstract class IcePdfUtil {
 
 	/**
-	 * Converts a PDF document (given as a byte array) to images.
+	 * Converts a PDF document (given as a byte array) to images. The image size in
+	 * pixels will be as many as the PDF printout would be at 72 DPI resolution.
+	 * (For example an A4 page 595 pixels wide and 842 pixels high.)
 	 * 
 	 * @param b byte array representing the PDF document
 	 * @return ArrayList of BufferedImages
@@ -26,7 +28,9 @@ public abstract class IcePdfUtil {
 	}
 
 	/**
-	 * Converts a PDF document (given as a byte array) to images.
+	 * Converts a PDF document (given as a byte array) to images. The image size in
+	 * pixels will be as many as the PDF printout would be at 72 DPI resolution.
+	 * (For example an A4 page 595 pixels wide and 842 pixels high.)
 	 * 
 	 * @param b     byte array representing the PDF document
 	 * @param fZoom zoom ratio - how big should be the image
@@ -37,6 +41,9 @@ public abstract class IcePdfUtil {
 	 * 
 	 */
 	public static ArrayList<BufferedImage> convertPdfToImage(byte[] b, float fZoom) {
+		if (fZoom < 0.001f) {
+			fZoom = 1f;
+		}
 		Document document = new Document();
 		ArrayList<BufferedImage> alBIs = new ArrayList<>();
 		try {
