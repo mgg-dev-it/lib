@@ -24,7 +24,24 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>mgg-dev-it</groupId>
+			<artifactId>icepdf-6-3-1-repair</artifactId>
+			<version>6.3.1</version>
+		</dependency>
 	</dependencies>
+	<repositories>
+		<repository>
+			<id>icepdf-repo</id>
+			<url>https://github.com/mgg-dev-it/fork/releases/tag/icepdf-6-3-1-repair</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 	<build>
 		<plugins>
 			<plugin>
